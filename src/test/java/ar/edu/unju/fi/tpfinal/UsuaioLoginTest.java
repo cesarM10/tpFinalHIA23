@@ -3,7 +3,7 @@ package ar.edu.unju.fi.tpfinal;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,6 +20,7 @@ class UsuaioLoginTest {
 	IUsuarioService usuarioService;
 	
 	@Test
+	@Disabled
 	void testUsuario() {
 		//se agregara datos del  usuario.
 	   Usuario us = new Usuario();

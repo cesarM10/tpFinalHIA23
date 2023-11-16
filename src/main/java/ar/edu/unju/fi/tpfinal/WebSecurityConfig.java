@@ -39,7 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		http
 		.authorizeRequests()
 			.antMatchers(resources).permitAll()//Peticion a todos los recursos.
-		     .antMatchers("/", "/index","/registro").permitAll()  
+		     .antMatchers("/", "/index","/registro", "/register-user").permitAll()
 		     .anyRequest().authenticated() 
 		     .and()
 	   .formLogin()

@@ -2,6 +2,7 @@ package ar.edu.unju.fi.tpfinal.service.imp;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -12,7 +13,7 @@ import ar.edu.unju.fi.tpfinal.model.Usuario;
 import ar.edu.unju.fi.tpfinal.repository.IUsuarioRepository;
 import ar.edu.unju.fi.tpfinal.service.IUsuarioService;
 @Service("empleadoService")//
-public class UsuarioServiceImp implements IUsuarioService{
+public class UsuarioServiceImp implements IUsuarioService {
 	
 	private List<Usuario> usuarioList = new ArrayList<Usuario>();
 	
@@ -65,6 +66,16 @@ public class UsuarioServiceImp implements IUsuarioService{
 		return usuario;
 	}
 
+	@Override
+	public boolean findUserName(String username) {
+		Optional<Usuario> user = usuarioRepository.findByUsuario(username);
 
-	
+		if(user.isPresent()){
+			return true;
+		}
+
+		return false;
+	}
+
+
 }

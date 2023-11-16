@@ -45,13 +45,10 @@ public class AutSeccessHandler implements AuthenticationSuccessHandler{
 		//Paginas en las que pueden acceder los CLIENTES O ADMIN 
 		if(userAdmin) {
 			redirectStrategy.sendRedirect(request, response, "/home");//pagina si tienen permiso
-		}else {
-			if(userCliente) {
+		} else if (userCliente) {
 			redirectStrategy.sendRedirect(request, response, "/home");//pagina si tienen permiso
-		}else {
+		} else {
 			throw new IllegalStateException();
-	       	}
-		
     	}
 	}
 }

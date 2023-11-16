@@ -12,5 +12,5 @@ public interface IUsuarioService {
 	public void agregarUsuario(Usuario usuario);
 	public List<Usuario> obtenerUsuarios();
 	public Usuario getUser();
-
+	boolean findUserName(String username);
 }
