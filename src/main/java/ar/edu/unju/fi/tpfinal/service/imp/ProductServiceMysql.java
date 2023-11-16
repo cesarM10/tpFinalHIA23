@@ -1,0 +1,107 @@
+/**
+ * 
+ */
+package ar.edu.unju.fi.tpfinal.service.imp;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+ 
+import ar.edu.unju.fi.tpfinal.repository.IProductRepository;
+import ar.edu.unju.fi.tpfinal.model.Product;
+import ar.edu.unju.fi.tpfinal.service.IProductService;
+
+/**
+ * @author Alvaro
+ *
+ */
+@Service("productServiceMysql")
+public class ProductServiceMysql implements IProductService {
+
+	private static final Log LOGGER = LogFactory.getLog(ProductServiceMysql.class);
+	
+	private List<Product> listaProductos = new ArrayList<Product>();
+	
+	@Autowired
+	private Product product;
+	
+	@Autowired
+	private IProductRepository productRepository;
+	
+	@Override
+	public void generarTablaProducto() {
+		// TODO Auto-generated method stub
+
+	}
+// agrega un  producto  
+	@Override
+	public void agregarProducto(Product product) {
+		// TODO Auto-generated method stub
+		productRepository.save(product);
+	}
+
+	@Override
+	public List<Product> obtenerProductos() {
+		// TODO Auto-generated method stub
+		List<Product> products = (List<Product>) productRepository.findAll();
+		return products;
+	}
+
+	@Override
+	public Product getProduct() {
+		// TODO Auto-generated method stub
+		return product;
+	}
+
+	@Override
+	public Optional<Product> getProductPorId(Long id) {
+		// TODO Auto-generated method stub
+		Optional<Product> product = productRepository.findById(id);
+		return product;
+	}
+//eliminacion de un producto de la lista
+	@Override
+	public void eliminarProduct(Long id) {
+		// TODO Auto-generated method stub
+		productRepository.deleteById(id);
+	}
+//mustra un listado de los productos
+	@Override
+	public List<Product> listaDeProductos() {
+		
+		return listaProductos;
+	}
+//agrega un producto a la lista
+	@Override
+	public void agregarListaDeProductos(Product product) {
+		listaProductos.add(product);
+
+	}
+
+	@Override
+	public List<Product> buscarProductPorProductCode(Long productCode) {
+		if(productCode == null) {
+			
+		}else {
+			listaProductos = productRepository.findByProductCode(productCode);
+			LOGGER.info("ENTRO POR VALOR INGRESADO");
+		}
+		return listaProductos;
+	}
+
+	@Override
+	public Product updateStockPorProductCode(Long productCode, int cantidad) {
+		Product producto = productRepository.findByProductCode(productCode).get(0);
+		
+		producto.setQuantityInStock(producto.getQuantityInStock()-cantidad);
+		productRepository.save(producto);
+	
+		return producto;
+	}
+
+}
