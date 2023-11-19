@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
 	<body>
 		<header th:fragment="header">
-			<div class="jumbotron jumbotron-fluid"
-				style="background-color: rgb(45, 123, 210); text-align: center; 
-				background-image: url(/image/cc2.jpg); background-size: cover;"> 
-			  <div id="senseiMotors" class="container">
-			    <h1 class="display-3 text-white" style="font-family: century gothic;">SENSEI MOTORS</h1>
-			    <p class="lead text-white display-4">Sistema de ventas.</p>
+			
 			    
 			     <style>
 					
@@ -35,88 +31,114 @@
 
 						    }
 						    
-						#f img{
-						 float:right;
-						 background-color:none;
-						 border-radius: 10px
-						}
+							#f img{
+							 float:right;
+							 background-color:none;
+							 border-radius: 10px
+							}
+							
+							
+						    body {
+						      padding-top: 56px; /* Altura del navbar para evitar que el contenido se solape con él */
+						    }
+						
+						    @media (min-width: 768px) {
+						      body {
+						        padding-top: 0; /* Reinicia el padding cuando el tamaño de la pantalla es suficientemente grande */
+						      }
+						    }
+						
+						    .navbar {
+						      background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+						    }
+						
+						    .navbar-nav .nav-item {
+						      padding: 8px 15px;
+						    }
+						
+						    .navbar-nav .nav-link {
+						      color: #ffffff; /* Texto blanco */
+						    }
+
 					</style>
-			   
-			   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;  opacity: .8;">
-				  <a class="navbar-brand" th:href="@{/home}">
-				  <img class="idIM" alt="home" src="/image/iconos/c1.png" width="75" height="70" /></a>
+
+			   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+				  <a class="navbar-brand" th:href="@{/home}">Logo</a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 				  </button>
-				 				  <div class="collapse navbar-collapse" id="navbarNav">
-				  
-					
-					
-				   <div id="menu">
-				    <ul class="navbar-nav" style="font-family: century gothic;">
+				  <div class="collapse navbar-collapse" id="navbarNav">
+				    <ul class="navbar-nav ml-auto">
+				      <li class="nav-item active">
+				        <a class="nav-link" th:href="@{/home}">Inicio</a>
+				      </li>
 				      <li class="nav-item dropdown active">
-					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Producto</a>
-					    <div class="dropdown-menu" style="font-family: century gothic;">
-					      <a class="dropdown-item" th:href="@{/producto/nuevo}">Nuevo Producto</a>
-					      <a class="dropdown-item" th:href="@{/producto/listado}">Lista Productos</a> 
-					    </div>
-					  </li>
-					  
-					  <li class="nav-item dropdown active">
-					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categoria</a>
-					    <div class="dropdown-menu" style="font-family: century gothic;">
-					      <a class="dropdown-item" th:href="@{/productoline/nuevo}">Nueva Categoria</a>
-					      <a class="dropdown-item" th:href="@{/productoline/listado}">Lista de Categorias</a>
-					    </div>
-					  </li>
-					  
-					  <li class="nav-item dropdown active">
-					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
-					    <div class="dropdown-menu" style="font-family: century gothic;">
-					      <a class="dropdown-item" th:href="@{/cliente/nuevo}">Nuevo Cliente</a>
-					      <a class="dropdown-item" th:href="@{/cliente/listado}">Lista Clientes</a>
-					    </div>
-					  </li>
-					  
-					  <li class="nav-item dropdown active">
-					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Compra</a>
-					    <div class="dropdown-menu" style="font-family: century gothic;" >
-					      <a class="dropdown-item" th:href="@{/compra/nueva/orden}">Nueva Compra</a>
-					      <a class="dropdown-item" th:href="@{/compra/listado}">Lista Compras</a>
-					    </div>
-					  </li>
-					  
-					   <li class="nav-item dropdown active">
-					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empleado</a>
-					    <div class="dropdown-menu" style="font-family: century gothic;" >
-					      <a class="dropdown-item" th:href="@{/employee/nuevo}">Nuevo Empleado</a>
-					      <a class="dropdown-item" th:href="@{/employee/listado}">Lista Empleados</a>
-					    </div>
-					  </li>
-					  
-					  <li class="nav-item dropdown active">
-					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Oficina</a>
-					    <div class="dropdown-menu" style="font-family: century gothic;" >
-					      <a class="dropdown-item" th:href="@{/office/nuevo}">Nueva Oficina</a>
-					      <a class="dropdown-item" th:href="@{/office/listado}">Lista Oficinas</a>
-					    </div>
-					  </li>
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
+				        <div class="dropdown-menu">
+							<a class="dropdown-item" th:href="@{/producto/nuevo}">Nuevo producto</a>
+							<a class="dropdown-item" th:href="@{/producto/listado}">Lista de productos</a> 
+						</div>
+				      </li>
+				      <li class="nav-item dropdown active">
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
+				        <div class="dropdown-menu">
+							<a class="dropdown-item" th:href="@{/productoline/nuevo}">Nueva categoria</a>
+							<a class="dropdown-item" th:href="@{/productoline/listado}">Lista de categorias</a> 
+						</div>
+				      </li>
+				      <li class="nav-item dropdown active">
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
+				        <div class="dropdown-menu">
+							<a class="dropdown-item" th:href="@{/cliente/nuevo}">Nuevo cliente</a>
+							<a class="dropdown-item" th:href="@{/cliente/listado}">Lista de clientes</a> 
+						</div>
+				      </li>
+				      <li class="nav-item dropdown active">
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Compras</a>
+				        <div class="dropdown-menu">
+							<a class="dropdown-item" th:href="@{/compra/nueva/orden}">Nueva compra</a>
+							<a class="dropdown-item" th:href="@{/compra/listado}">Lista de compras</a> 
+						</div>
+				      </li>
+				      <li class="nav-item dropdown active">
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empleados</a>
+				        <div class="dropdown-menu">
+							<a class="dropdown-item" th:href="@{/employee/nuevo}">Nuevo empleado</a>
+							<a class="dropdown-item" th:href="@{/employee/listado}">Lista de empleados</a> 
+						</div>
+				      </li>
 				      
-				   </ul>
-				   
-				     </div>
+				      <li class="nav-item dropdown active">
+				        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Oficinas</a>
+				        <div class="dropdown-menu">
+							<a class="dropdown-item" th:href="@{/office/nuevo}">Nueva oficina</a>
+							<a class="dropdown-item" th:href="@{/office/listado}">Lista de oficinas</a> 
+						</div>
+				      </li>
+				      
+				      <li class="nav-item">
+				        <a class="nav-link" th:href="@{/logout}" style="color: #e61700;">Salir
+				         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+						  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+						  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+						</svg>
+				        </a>
+				      </li>
+				    </ul>
 				  </div>
-				  
-				       <div id="f">
-					    <a class="navbar-brand" th:href="@{/logout}" >salida<br>
-					       <img src="/image/iconos/salida.png" alt="#" width="75" height="70" ><br>
-					    </a>
-				  </div>
-				  
-				</nav> 
+				</nav>
+
+			<div class="jumbotron jumbotron-fluid" style="background-image: url(https://c.wallhere.com/photos/a3/67/Forza_Horizon_5_video_games_Dodge_Charger_Dodge_American_cars_PlaygroundGames_supercharger_vehicle-2287186.jpg!d); background-size: cover;
+														height: 20rem; background-position: center;">
+			  <div class="container">
+			    <h1 class="display-4" style="color: #dadd08;">Premier Cars</h1>
+			    <p class="lead" style="color: #dadd08;">"Donde la excelencia en autos se encuentra con la excelencia en servicio."</p>
 			  </div>
 			</div>
-			
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
 		</header>
 	
 	</body>

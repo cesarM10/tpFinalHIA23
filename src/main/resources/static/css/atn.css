@@ -1,8 +1,6 @@
 @charset "utf-8";
 body{
-background: -prefix-linear-gradient(left, black, yellow);
-background: linear-gradient(to right, yellow, black);
-
+background-image: linear-gradient(to bottom, #ad00be, #8e007c, #640448, #360d22, #000000);
 }
 
 
@@ -106,4 +104,12 @@ text-shadow: -3px -3px 3px yellow, 3px -3px 3px #000000, -3px 3px 3px #000000, 3
 		color: #3C3B3A   ;
 		background-color: #FFC300;
 		border: #10100F 1px solid;
+}
+
+.card-body{
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
