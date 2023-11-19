@@ -13,7 +13,7 @@
 	
 
 		    <header>
-		      <a href="#" class="brand">ERROR404</a>
+		      <a href="#" class="brand">Web Crafters</a>
 		      <div class="menu-btn"></div>
 		      <div class="navigation">
 		        <div class="navigation-items">
@@ -26,22 +26,22 @@
 		
 		    <section class="home">
 		    
-			      <video class="video-slide" src="/vi/video3.mp4" autoplay muted loop></video>
+			      <!-- <video class="video-slide" src="/vi/video3.mp4" autoplay muted loop></video>-->
 			      <div class="content active">
 			       
 			       
 			       			<div class="login-box">
-							 <img src="image/iconos/c4.gif" class="avatar" alt="Avatar Image">
+							 <!--<img src="image/iconos/c4.gif" class="avatar" alt="Avatar Image">-->
 								<h1>ACCESO</h1>
 								  <!-- FORMULARIO -->
 									<form class="form" th:action="@{/login}" method="post">
 										 <!-- NOMBRE DE USUARIO INPUT -->
 											 <label >Nombre de Usuario</label>
-	<!-- input asociado a name -->	         <input type="text" class="form-control" id="username"placeholder="Enter Username" name="username">
+	<!-- input asociado a name -->	         <input type="text" class="form-control" id="username"placeholder="Nombre de usuario" name="username">
 										 <!-- CONSTRASEÑA INPUT -->
 											 <label >Contraseña</label>
-	<!-- input asociado a name -->			 <input type="password" class="form-control" id="password"placeholder="Enter Password" name="password">
-											 <input type="submit" value="💪 ACEPTAR 👊">
+	<!-- input asociado a name -->			 <input type="password" class="form-control" id="password"placeholder="Contraseña" name="password">
+											 <input type="submit" value=" ACEPTAR">
 											 <a th:href="@{/registro}">¿No tienes una cuenta?</a>
 									 </form>
 									 <div class="alert-danger text-center" th:if="${formLoginErrorMessage}" th:text="${formLoginErrorMessage}">full F</div>
