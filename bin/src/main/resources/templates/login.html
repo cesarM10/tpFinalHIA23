@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+<title>login</title>
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" th:href="@{/css/atn2.css}">
+<link rel="shortcut icon" href="/image/iconos/c5.png"><!-- icono de la pestaña -->
+</head>
+<body >
+	
+
+		    <header>
+		      <a href="#" class="brand">ERROR404</a>
+		      <div class="menu-btn"></div>
+		      <div class="navigation">
+		        <div class="navigation-items">
+		          <a th:href="@{/index}">Volver</a>
+		          
+		          
+		        </div>
+		      </div>
+		    </header>
+		
+		    <section class="home">
+		    
+			      <video class="video-slide" src="/vi/video3.mp4" autoplay muted loop></video>
+			      <div class="content active">
+			       
+			       
+			       			<div class="login-box">
+							 <img src="image/iconos/c4.gif" class="avatar" alt="Avatar Image">
+								<h1>ACCESO</h1>
+								  <!-- FORMULARIO -->
+									<form class="form" th:action="@{/login}" method="post">
+										 <!-- NOMBRE DE USUARIO INPUT -->
+											 <label >Nombre de Usuario</label>
+	<!-- input asociado a name -->	         <input type="text" class="form-control" id="username"placeholder="Enter Username" name="username">
+										 <!-- CONSTRASEÑA INPUT -->
+											 <label >Contraseña</label>
+	<!-- input asociado a name -->			 <input type="password" class="form-control" id="password"placeholder="Enter Password" name="password">
+											 <input type="submit" value="💪 ACEPTAR 👊">
+											 <a th:href="@{/registro}">¿No tienes una cuenta?</a>
+									 </form>
+									 <div class="alert-danger text-center" th:if="${formLoginErrorMessage}" th:text="${formLoginErrorMessage}">full F</div>
+	   						 </div>
+			      </div>
+			     
+			
+		      
+		    </section>
+		
+		    <script type="text/javascript">
+		    //Javacript for responsive navigation menu
+		    const menuBtn = document.querySelector(".menu-btn");
+		    const navigation = document.querySelector(".navigation");
+		
+		    menuBtn.addEventListener("click", () => {
+		      menuBtn.classList.toggle("active");
+		      navigation.classList.toggle("active");
+		    });
+		
+		    //Javacript for video slider navigation
+		    const btns = document.querySelectorAll(".nav-btn");
+		    const slides = document.querySelectorAll(".video-slide");
+		    const contents = document.querySelectorAll(".content");
+		
+		    var sliderNav = function(manual){
+		      btns.forEach((btn) => {
+		        btn.classList.remove("active");
+		      });
+		
+		      slides.forEach((slide) => {
+		        slide.classList.remove("active");
+		      });
+		
+		      contents.forEach((content) => {
+		        content.classList.remove("active");
+		      });
+		
+		      btns[manual].classList.add("active");
+		      slides[manual].classList.add("active");
+		      contents[manual].classList.add("active");
+		    }
+		
+		    btns.forEach((btn, i) => {
+		      btn.addEventListener("click", () => {
+		        sliderNav(i);
+		      });
+		    });
+		    
+		    
+    
+		    </script>
+
+	
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/popper.js/1.16.1-lts/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+	<body>
+		<header th:fragment="header">
+			<div class="jumbotron jumbotron-fluid"
+				style="background-color: rgb(45, 123, 210); text-align: center; 
+				background-image: url(/image/cc2.jpg); background-size: cover;"> 
+			  <div id="senseiMotors" class="container">
+			    <h1 class="display-3 text-white" style="font-family: century gothic;">SENSEI MOTORS</h1>
+			    <p class="lead text-white display-4">Sistema de ventas.</p>
+			    
+			     <style>
+					
+				      	#menu ul li a{
+							display:block; 
+							padding:8px;
+							text-decoration: none;
+							opacity: 100%;
+						    }
+						  #menu ul li a:hover{
+							background-color: #dadd08; 
+							color:black;
+							font-family: cursive;
+							opacity: none;
+							
+						    }
+						    
+						   
+						  nav a  img:hover{
+							transform:scale(1.2);
+							background-color: #e61700; 
+							 opacity: none;
+							  border-radius: 50px;
+
+						    }
+						    
+						#f img{
+						 float:right;
+						 background-color:none;
+						 border-radius: 10px
+						}
+					</style>
+			   
+			   <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;  opacity: .8;">
+				  <a class="navbar-brand" th:href="@{/home}">
+				  <img class="idIM" alt="home" src="/image/iconos/c1.png" width="75" height="70" /></a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				 				  <div class="collapse navbar-collapse" id="navbarNav">
+				  
+					
+					
+				   <div id="menu">
+				    <ul class="navbar-nav" style="font-family: century gothic;">
+				      <li class="nav-item dropdown active">
+					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Producto</a>
+					    <div class="dropdown-menu" style="font-family: century gothic;">
+					      <a class="dropdown-item" th:href="@{/producto/nuevo}">Nuevo Producto</a>
+					      <a class="dropdown-item" th:href="@{/producto/listado}">Lista Productos</a> 
+					    </div>
+					  </li>
+					  
+					  <li class="nav-item dropdown active">
+					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categoria</a>
+					    <div class="dropdown-menu" style="font-family: century gothic;">
+					      <a class="dropdown-item" th:href="@{/productoline/nuevo}">Nueva Categoria</a>
+					      <a class="dropdown-item" th:href="@{/productoline/listado}">Lista de Categorias</a>
+					    </div>
+					  </li>
+					  
+					  <li class="nav-item dropdown active">
+					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cliente</a>
+					    <div class="dropdown-menu" style="font-family: century gothic;">
+					      <a class="dropdown-item" th:href="@{/cliente/nuevo}">Nuevo Cliente</a>
+					      <a class="dropdown-item" th:href="@{/cliente/listado}">Lista Clientes</a>
+					    </div>
+					  </li>
+					  
+					  <li class="nav-item dropdown active">
+					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Compra</a>
+					    <div class="dropdown-menu" style="font-family: century gothic;" >
+					      <a class="dropdown-item" th:href="@{/compra/nueva/orden}">Nueva Compra</a>
+					      <a class="dropdown-item" th:href="@{/compra/listado}">Lista Compras</a>
+					    </div>
+					  </li>
+					  
+					   <li class="nav-item dropdown active">
+					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empleado</a>
+					    <div class="dropdown-menu" style="font-family: century gothic;" >
+					      <a class="dropdown-item" th:href="@{/employee/nuevo}">Nuevo Empleado</a>
+					      <a class="dropdown-item" th:href="@{/employee/listado}">Lista Empleados</a>
+					    </div>
+					  </li>
+					  
+					  <li class="nav-item dropdown active">
+					    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Oficina</a>
+					    <div class="dropdown-menu" style="font-family: century gothic;" >
+					      <a class="dropdown-item" th:href="@{/office/nuevo}">Nueva Oficina</a>
+					      <a class="dropdown-item" th:href="@{/office/listado}">Lista Oficinas</a>
+					    </div>
+					  </li>
+				      
+				   </ul>
+				   
+				     </div>
+				  </div>
+				  
+				       <div id="f">
+					    <a class="navbar-brand" th:href="@{/logout}" >salida<br>
+					       <img src="/image/iconos/salida.png" alt="#" width="75" height="70" ><br>
+					    </a>
+				  </div>
+				  
+				</nav> 
+			  </div>
+			</div>
+			
+		</header>
+	
+	</body>
+</html>

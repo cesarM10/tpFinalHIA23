@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Registro de Producto</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+		<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}">
+		<link rel="stylesheet" th:href="@{/css/atn.css}">
+	</head>
+	
+	<body>
+		<header th:replace="layout/header :: header"></header>
+			
+		
+		<div class="container">
+			<div class="row col-sm-12 col-md">
+		
+				<div id=alfa1  class="col-sm12 col-md" style="border: solid;">
+					<h1 style="font-family: century gothic">Alta de Producto</h1> 
+					<form  th:action="@{/producto/guardar}" method="post" th:object="${product}" >  
+						 
+							<div class="form-group row">
+							    <label for="productName" class="col-sm-2 col-form-label">Nombre del Producto</label>
+							    <div class="col-sm-10">
+							      <input type="text" class="form-control" id="productName" th:field="*{productName}" placeholder="Ingrese"  >
+							   	    </div>
+ 									<div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}"></div>
+							</div>
+							
+							
+							
+							<div class="form-group ">
+								<label for="productline" class="col-sm-2 col-form-label">Categoria de Producto</label>
+							    <select id="productline" th:field="*{productline.productLine}">
+							      <option th:each = "prl : ${productLines}" selected
+							      th:value="${prl.productLine}"
+							      th:text="${prl.productLine} + ' - ' + ${prl.textDescription}"
+							      th:selected="false"
+							      />
+							    </select>
+							    
+							    <div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('productline.productLine')}" th:errors="*{productline.productLine}"></div>
+							</div>
+							
+							
+							<!-- productScale -->
+							<div class="form-group row">
+							    <label for="productScale" class="col-sm-2 col-form-label">Escala de producto</label>
+							    <div class="col-sm-10">
+							      <input type="text" class="form-control" id="productScale" th:field="*{productScale}" placeholder="Ingrese"  >
+							    </div>
+ <div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('productScale')}" th:errors="*{productScale}"></div>
+							</div>
+							<!-- productVendor -->
+							<div class="form-group row">
+							    <label for="productVendor" class="col-sm-2 col-form-label">Marca</label>
+							    <div class="col-sm-10">
+							      <input type="text" class="form-control" id="productVendor" th:field="*{productVendor}" placeholder="Ingrese"  >
+							    </div>
+ <div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('productVendor')}" th:errors="*{productVendor}"></div>
+							</div>
+							<!-- productDescription -->
+							<div class="form-group row">
+							    <label for="productDescription" class="col-sm-2 col-form-label">Descripcion del producto</label>
+							    <div class="col-sm-10">
+							      <input type="text" class="form-control" id="productDescription" th:field="*{productDescription}" placeholder="Ingrese"  >
+							   </div>
+ <div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('productDescription')}" th:errors="*{productDescription}"></div> 
+							</div>
+							<!-- quantityInStock -->
+							<div class="form-group row">
+							    <label for="quantityInStock" class="col-sm-2 col-form-label">Cantidad en inventario</label>
+							    <div class="col-sm-10">
+							      <input type="number" class="form-control" id="quantityInStock" th:field="*{quantityInStock}" placeholder="Ingrese"  >
+							    </div>
+ <div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('quantityInStock')}" th:errors="*{quantityInStock}"></div> 
+							</div>
+							<!-- buyPrice -->
+							<div class="form-group row">
+							    <label for="buyPrice" class="col-sm-2 col-form-label">Precio de compra</label>
+							    <div class="col-sm-10">
+							      <input type="number" class="form-control" id="buyPrice" th:field="*{buyPrice}" step="0.01" >
+							     </div> 
+ <div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('buyPrice')}" th:errors="*{buyPrice}"></div>
+							</div>
+							<!-- buyPrice -->
+							 <div class="form-group row">
+							    <label for="MSRP" class="col-sm-2 col-form-label">MSRP</label>
+							    <div class="col-sm-10">
+							      <input type="number" class="form-control" id="MSRP" th:field="*{MSRP}" step="0.01" >
+							    </div>
+ <div class = "form-text text-danger col-sm-10 offset-2" th:if="${#fields.hasErrors('MSRP')}" th:errors="*{MSRP}"></div>
+							</div>
+								<button type="submit" class="btn btn-outline-dark">Enviar</button>
+					</form>
+					
+					 
+				</div>
+					
+				<div class="Col col-md-2">
+					<aside th:replace="layout/publicidad :: publicidad"></aside>
+				</div>
+			</div>	
+		</div><br>
+		<footer th:replace="layout/footer :: footer"></footer>
+	
+		<script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/popper.js/1.16.1-lts/popper.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.min.js}"></script>
+	</body>
+</html>
