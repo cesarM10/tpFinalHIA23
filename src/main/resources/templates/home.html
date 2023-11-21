@@ -1,148 +1,167 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
-<title>INICIO</title>
-<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}">
-<link rel="stylesheet" th:href="@{/css/atn.css}">
-<link rel="shortcut icon" href="/image/iconos/c5.png"><!-- icono de la pestaña -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+	<title>INICIO</title>
+	<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/atn.css}">
+	<link rel="shortcut icon" href="/image/iconos/c5.png"><!-- icono de la pestaña -->
 
 </head>
+
 <body>
 
 	<header th:replace="layout/header :: header"></header>
 	<div class="container">
-		<div class="col display-4" style="font-family: century gothic; font-size: 4; color: aliceblue;">Productos destacados
+		<div class="col display-4" style="font-family: century gothic; font-size: 4; color: aliceblue;">Nuestros
+			Productos
 		</div>
-		<div class="row " >
-			<div class="container row col-sm-12 col-md-10" align= center>
-			<!-- veremos -->
-			
-			
-		
-				<div class="card"  style="width: 16rem; margin: 1rem ; ">
-					
-						<img  src="/image/vender/a1.jpg" class="bs-card-img" alt="home" style="width: 16rem; height: 10rem;"></img>
-					
-				  
-				  <div class="card-body">
-				    <h5 class="card-title">Metropolitan 1500</h5>
-				    <p class="card-text">
-				      Este pequeñín hecho por Nash (también por Hudson, American Motors y Austin)
-				      es un auto extraño para la época ya que su motor era de 1,200 o 1,500 cc que no llegaban a 60 Hp 
-				    </p>
-				      <a href="#" 
-					     target="_blank" class="btn btn-dark"> Añadir al carrito
-					     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-						  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
-						 </svg>
-				      </a>
-				  </div>
-				</div>
-				
-				<div class="card"  style="width: 16rem; margin: 1rem ; ">
-			<!--  	<a class="navbar-brand" th:href="https://www.youtube.com/watch?v=zXh9U2h2l_o"></a> -->
-				  <img  src="/image/vender/a4.jpg" class="bs-card-img" alt="home"></img>
-				  <div class="card-body">
-				    <h5 class="card-title">Ford Super Deluxe Convertible</h5>
-				    <p class="card-text">
-				      Ford Super Deluxe convertible 1947. Ese mismo auto usado en la película es 
-				      propiedad de Macchio y está tan bien conservado, que fue utilizado en Cobra Kai.
-				    </p>
-				      <a href="#" 
-					     target="_blank" class="btn btn-dark"> Añadir al carrito
-					     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-						  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
-						 </svg>
-				      </a>
-				  </div>
-				</div>
-				
-					<div class="card"  style="width: 16rem; margin: 1rem ; ">
-				  <img  src="/image/vender/a3.jpg" class="bs-card-img" alt="home"></img>
-				  <div class="card-body">
-				    <h5 class="card-title">Cadillac Série 62 1951</h5>
-				    <p class="card-text">
-				      Tanto el familiar como el sedán de lujo están en la colección original del Sr. Miyagi (Pat Morita), sin embargo, el Pontiac 
-				      no vuelve a la colección de Larusso en la serie Cobra Kai
-				    </p>
-				     <a href="#" 
-					     target="_blank" class="btn btn-dark"> Añadir al carrito
-					     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-						  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
-						 </svg>
-				      </a>
-				  </div>
-				</div>
-				
-				<div class="card"  style="width: 16rem; margin: 1rem ; ">
-		
-				  <img  src="/image/vender/a2.jpg" class="bs-card-img" alt="home"></img>
-				  <div class="card-body">
-				    <h5 class="card-title">Chevrolet Pickup 1942</h5>
-				    <p class="card-text">
-				      Esta es la pick-up en la que el Sr. Miyagi pone a manejar a Daniel con una confesión hecha por ambos: ninguno de los dos sabe manejar muy bien, ni tienen registro de conducir, un mal ejemplo que nos llega 
-				      desde 1984 cuando se estrenó la zaga cinematográfica.
-				    </p>
-				      <a href="#" 
-					     target="_blank" class="btn btn-dark"> Añadir al carrito
-					     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-						  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
-						 </svg>
-				      </a>
-				  </div>
-				</div>
-				
-				<div class="card"  style="width: 16rem; margin: 1rem ; ">
-				  <img  src="/image/vender/a6.jpg" class="bs-card-img" alt="home"></img>
-				  <div class="card-body">
-				    <h5 class="card-title"> CHALLENGER </h5>
-				    <p class="card-text">
-				    El auto es rojo cuando Johnny lo obtiene, pero lo “tunea” durante la temporada dos de Cobra Kai.
-                     El proceso de personalización del coche es una de las mejores secuelas de la historia, remarcando la renovada personalidad de Lawrence..
-				    </p>
-				     <a href="#" 
-					     target="_blank" class="btn btn-dark"> Añadir al carrito
-					     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-						  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
-						 </svg>
-				      </a>
-				  </div>
-				</div>
-				
-				<div class="card"  style="width: 16rem; margin: 1rem ; ">
-			
-				  <img  src="/image/vender/a5.jpg" class="bs-card-img" alt="home"></img>
-				  <div class="card-body" style="display: flex;">
-				    <h5 class="card-title">deportivo Avanti Convertible</h5>
-				    <p class="card-text">
-				       automóvil deportivo fabricado por la Corporación Studebaker de South Bend, entre junio de 1962 y diciembre de 1963.
-				    </p>
-				      <a href="#" 
-					     target="_blank" class="btn btn-dark"> Añadir al carrito
-					     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
-						  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
-						 </svg>
-				      </a>
-				  </div>
-				</div>
-			
-     
-		
-				</div>
-					<div class="col col-md-2">
-						<aside th:replace="layout/publicidad :: publicidad"></aside>
+		<div class="row ">
+			<div class="container row col-sm-12 col-md-10" align=center>
+				<!-- veremos -->
+				<!-- Card 1 -->
+				<div class="card" style="width: 16rem; margin: 1rem ; ">
+					<img src="/image/vender/i1.jpg" class="bs-card-img" alt="home"
+						style="width: 16rem; height: 10rem;"></img>
+					<div class="card-body">
+						<h5 class="card-title">Ferrari LaFerrari</h5>
+						<p class="card-text">
+							Cuenta con las prestaciones más extremas jamás logradas por un coche de producción Ferrari y
+							cuenta con las soluciones técnicas más avanzadas e innovadoras que, en el futuro, se
+							extenderán al resto de la gama Ferrari.
+						</p>
+						<a href="#" target="_blank" class="btn btn-dark"> Añadir al carrito
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+								class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+								<path
+									d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+							</svg>
+						</a>
 					</div>
 				</div>
-			</div>	
-	
-			
-	
+				<!-- Card 2 -->
+				<div class="card" style="width: 16rem; margin: 1rem ; ">
+					<!--  	<a class="navbar-brand" th:href="https://www.youtube.com/watch?v=zXh9U2h2l_o"></a> -->
+					<img src="/image/vender/i2.jpg" class="bs-card-img" alt="home"
+						style="width: 16rem; height: 10rem;"></img>
+					<div class="card-body">
+						<h5 class="card-title">Honda NSX</h5>
+						<p class="card-text">
+							Se destaca por su alto desempeño y bajo consumo de
+							combustible gracias al sistema híbrido que
+							combina un motor V6 biturbo de 3.5 litros, acoplado a una transmisión de doble embrague.
+						</p>
+						<a href="#" target="_blank" class="btn btn-dark"> Añadir al carrito
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+								class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+								<path
+									d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+							</svg>
+						</a>
+					</div>
+				</div>
+				<!-- Card 3 -->
+				<div class="card" style="width: 16rem; margin: 1rem ; ">
+					<img src="/image/vender/i3.jpg" class="bs-card-img" alt="home"
+						style="width: 16rem; height: 10rem;"></img>
+					<div class="card-body">
+						<h5 class="card-title">Bugatti Chiron</h5>
+						<p class="card-text">
+							El Bugatti Chiron es un automóvil superdeportivo cupé de dos puertas biplaza, con motor
+							central-trasero montado longitudinalmente y de tracción integral, diseñado y desarrollado
+							por Bugatti Automobiles S.A.S.
+						</p>
+						<a href="#" target="_blank" class="btn btn-dark"> Añadir al carrito
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+								class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+								<path
+									d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+							</svg>
+						</a>
+					</div>
+				</div>
+				<!-- Card 4 -->
+				<div class="card" style="width: 16rem; margin: 1rem ; ">
+					<img src="/image/vender/i4.jpg" class="bs-card-img" alt="home"
+						style="width: 16rem; height: 10rem;"></img>
+					<div class="card-body">
+						<h5 class="card-title">Jaguar F-Type 5.0 V8</h5>
+						<p class="card-text">
+							Es un automóvil deportivo Gran Turismo de 2 puertas biplaza. Tiene motor delantero montado
+							longitudinalmente de tracción trasera, chasis de
+							aluminio y carrocería coupé Fastback con techo de lona de accionamiento
+							eléctrico.
+						</p>
+						<a href="#" target="_blank" class="btn btn-dark"> Añadir al carrito
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+								class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+								<path
+									d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+							</svg>
+						</a>
+					</div>
+				</div>
+				<!-- Card 5 -->
+				<div class="card" style="width: 16rem; margin: 1rem ; ">
+					<img src="/image/vender/i5.jpg" class="bs-card-img" alt="home"
+						style="width: 16rem; height: 10rem;"></img>
+					<div class="card-body">
+						<h5 class="card-title"> Cadillac Elmiraj Concept </h5>
+						<p class="card-text">
+							Es una representación moderna al formato clásico de un gran coupe, convirtiéndose en una
+							expresión pura de diseño esbelto y atractivo desempeño de tracción trasera. Este un coupe de
+							dos puertas y cuatro asientos cuenta con gran
+							presencia y aplomo.
+						</p>
+						<a href="#" target="_blank" class="btn btn-dark"> Añadir al carrito
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+								class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+								<path
+									d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+							</svg>
+						</a>
+					</div>
+				</div>
+				<!-- Card 6 -->
+				<div class="card" style="width: 16rem; margin: 1rem ; ">
+					<img src="/image/vender/i6.jpe	g" class="bs-card-img" alt="home"
+						style="width: 16rem; height: 10rem;"></img>
+					<div class="card-body" style="display: flex;">
+						<h5 class="card-title">BMW M3</h5>
+						<p class="card-text">
+							El diseño del coche es totalmente radical con unas entradas de aire muy marcadas o una
+							rejilla de varillas dobles para los riñones frontales. Las ópticas se unen por primera vez a
+							los riñones y la luz de xenón puede sustituirse por una moderna iluminación
+							de LED.
+						</p>
+						<a href="#" target="_blank" class="btn btn-dark"> Añadir al carrito
+							<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+								class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+								<path
+									d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+							</svg>
+						</a>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div class="col col-md-2">
+				<aside th:replace="layout/publicidad :: publicidad"></aside>
+			</div>
+		</div>
+	</div>
+
+
+
 	<footer th:replace="layout/footer :: footer"></footer>
-	
+
 	<script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
 	<script type="text/javascript" th:src="@{/webjars/popper.js/1.16.1-lts/popper.min.js}"></script>
 	<script type="text/javascript" th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.min.js}"></script>
 </body>
+
 </html>
